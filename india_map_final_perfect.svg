@@ -85,7 +85,7 @@ window.onload = () =&gt; {
   font-weight="bold"
   fill="white"
   stroke="black"
-  stroke-width="0.25"
+  stroke-width="0.1"
   text-anchor="middle"
   pointer-events="none"
   visibility="hidden">
