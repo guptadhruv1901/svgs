@@ -78,7 +78,7 @@
     path.addEventListener("click", () => {
       // Set clicked state's color
       resetFillColors();
-      path.setAttribute("fill", "#fdd835"); // highlight color
+      path.setAttribute("fill", "#333333"); // highlight color
 
       // Get and store state name
       stateName = path.querySelector("title")?.textContent || "Unknown";
