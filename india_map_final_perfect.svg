@@ -79,7 +79,18 @@ window.onload = () =&gt; {
         }
     });
 };
-</script><text fill="white" font-size="14" font-weight="bold" stroke="black" stroke-width="0.75" id="stateLabel" pointer-events="none" text-anchor="middle" visibility="hidden"></text><script type="text/ecmascript">
+</script><text
+  id="stateLabel"
+  font-size="14"
+  font-weight="bold"
+  fill="white"
+  stroke="black"
+  stroke-width="0.75"
+  text-anchor="middle"
+  pointer-events="none"
+  visibility="hidden">
+</text>
+<script type="text/ecmascript">
 <![CDATA[
   let stateName = "";
   const svg = document.querySelector("svg");
