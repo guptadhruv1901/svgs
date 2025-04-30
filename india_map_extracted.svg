@@ -57,29 +57,44 @@
   let stateName = "";
   const svg = document.querySelector("svg");
 
+  // Label text element
   const label = document.createElementNS("http://www.w3.org/2000/svg", "text");
-  label.setAttribute("class", "state-label");
-  label.setAttribute("visibility", "hidden");
   label.setAttribute("font-size", "14");
   label.setAttribute("font-weight", "bold");
-  label.setAttribute("fill", "black");
+  label.setAttribute("fill", "#222");
   label.setAttribute("text-anchor", "middle");
   label.setAttribute("pointer-events", "none");
+  label.setAttribute("visibility", "hidden");
   svg.appendChild(label);
 
-  svg.querySelectorAll("path").forEach((path) => {
+  // Function to reset state fill
+  function resetFillColors() {
+    svg.querySelectorAll("path").forEach(p => {
+      p.setAttribute("fill", "#cccccc"); // default color
+    });
+  }
+
+  svg.querySelectorAll("path").forEach(path => {
     path.addEventListener("click", () => {
+      // Set clicked state's color
+      resetFillColors();
+      path.setAttribute("fill", "#fdd835"); // highlight color
+
+      // Get and store state name
       stateName = path.querySelector("title")?.textContent || "Unknown";
+
+      // Get bounding box center
       const bbox = path.getBBox();
       const x = bbox.x + bbox.width / 2;
       const y = bbox.y + bbox.height / 2;
 
+      // Show name directly over the state
       label.textContent = stateName;
       label.setAttribute("x", x);
       label.setAttribute("y", y);
       label.setAttribute("visibility", "visible");
 
-      console.log("Clicked state:", stateName);
+      console.log("Clicked:", stateName);
     });
   });
 ]]></script>
