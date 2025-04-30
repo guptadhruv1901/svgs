@@ -79,7 +79,7 @@ window.onload = () =&gt; {
         }
     });
 };
-</script><text fill="black" font-size="14" font-weight="bold" id="stateLabel" pointer-events="none" text-anchor="middle" visibility="hidden"></text><script type="text/ecmascript">
+</script><text fill="white" font-size="14" font-weight="bold" id="stateLabel" pointer-events="none" text-anchor="middle" visibility="hidden"></text><script type="text/ecmascript">
 <![CDATA[
   let stateName = "";
   const svg = document.querySelector("svg");
